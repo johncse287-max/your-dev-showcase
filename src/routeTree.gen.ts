@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DemoBusinessWebsiteRouteImport } from './routes/demo.business-website'
+import { Route as DemoDeveloperDashboardRouteImport } from './routes/demo.developer-dashboard'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DemoBusinessWebsiteRoute = DemoBusinessWebsiteRouteImport.update({
+  id: '/demo/business-website',
+  path: '/demo/business-website',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemoDeveloperDashboardRoute = DemoDeveloperDashboardRouteImport.update({
+  id: '/demo/developer-dashboard',
+  path: '/demo/developer-dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/demo/business-website': typeof DemoBusinessWebsiteRoute
+  '/demo/developer-dashboard': typeof DemoDeveloperDashboardRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/demo/business-website': typeof DemoBusinessWebsiteRoute
+  '/demo/developer-dashboard': typeof DemoDeveloperDashboardRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/demo/business-website': typeof DemoBusinessWebsiteRoute
+  '/demo/developer-dashboard': typeof DemoDeveloperDashboardRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/demo/business-website' | '/demo/developer-dashboard'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/demo/business-website' | '/demo/developer-dashboard'
+  id: '__root__' | '/' | '/demo/business-website' | '/demo/developer-dashboard'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DemoBusinessWebsiteRoute: typeof DemoBusinessWebsiteRoute
+  DemoDeveloperDashboardRoute: typeof DemoDeveloperDashboardRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/demo/business-website': {
+      id: '/demo/business-website'
+      path: '/demo/business-website'
+      fullPath: '/demo/business-website'
+      preLoaderRoute: typeof DemoBusinessWebsiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo/developer-dashboard': {
+      id: '/demo/developer-dashboard'
+      path: '/demo/developer-dashboard'
+      fullPath: '/demo/developer-dashboard'
+      preLoaderRoute: typeof DemoDeveloperDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DemoBusinessWebsiteRoute: DemoBusinessWebsiteRoute,
+  DemoDeveloperDashboardRoute: DemoDeveloperDashboardRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
