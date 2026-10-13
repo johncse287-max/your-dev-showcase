@@ -1,8 +1,10 @@
 import { useState, type FormEvent } from "react";
-import { Mail, Send } from "lucide-react";
+import { Mail, MessageCircle, Phone, Send } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 
 const EMAIL = "info@montechglobalservices.com";
+const PHONE = "+8801576768207";
+const WHATSAPP_URL = "https://wa.me/8801576768207";
 
 type Errors = { name?: string; email?: string; subject?: string; message?: string };
 
@@ -60,16 +62,68 @@ export function Contact() {
         <div className="grid gap-10 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div className="rounded-xl border border-border bg-card p-6">
-              <h3 className="flex items-center gap-2 font-semibold">
-                <Mail size={18} className="text-primary" /> Email
-              </h3>
-              <a
-                href={`mailto:${EMAIL}`}
-                className="mt-2 block break-all text-sm text-primary underline-offset-4 hover:underline"
-              >
-                {EMAIL}
-              </a>
-              <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+              <ul className="space-y-5 text-sm">
+                <li>
+                  <h3 className="flex items-center gap-2 font-semibold">
+                    <Mail size={18} className="text-primary" /> Email
+                  </h3>
+                  <a
+                    href={`mailto:${EMAIL}`}
+                    className="mt-1.5 block break-all text-primary underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+                  >
+                    {EMAIL}
+                  </a>
+                </li>
+                <li>
+                  <h3 className="flex items-center gap-2 font-semibold">
+                    <Phone size={18} className="text-primary" /> Phone
+                  </h3>
+                  <a
+                    href={`tel:${PHONE.replace(/[^\d+]/g, "")}`}
+                    className="mt-1.5 block text-primary underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+                  >
+                    {PHONE}
+                  </a>
+                </li>
+                <li>
+                  <h3 className="flex items-center gap-2 font-semibold">
+                    <MessageCircle size={18} className="text-primary" /> WhatsApp
+                  </h3>
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1.5 block break-all text-primary underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+                  >
+                    wa.me/8801576768207
+                  </a>
+                </li>
+              </ul>
+
+              <div className="mt-7 flex flex-wrap gap-3">
+                <a
+                  href={`mailto:${EMAIL}`}
+                  className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+                >
+                  <Mail size={16} /> Email Me
+                </a>
+                <a
+                  href={`tel:${PHONE.replace(/[^\d+]/g, "")}`}
+                  className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-border px-5 py-3 text-sm font-semibold transition-colors hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+                >
+                  <Phone size={16} /> Call
+                </a>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-border px-5 py-3 text-sm font-semibold transition-colors hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+                >
+                  <MessageCircle size={16} /> WhatsApp
+                </a>
+              </div>
+
+              <p className="mt-7 text-sm leading-relaxed text-muted-foreground">
                 This form opens your email app with the message pre-filled, so
                 nothing is sent without you seeing it first. A direct
                 server-side form can be added later.
