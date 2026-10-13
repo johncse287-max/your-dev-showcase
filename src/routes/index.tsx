@@ -3,6 +3,8 @@ import { Nav } from "@/components/portfolio/Nav";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
 import { Skills } from "@/components/portfolio/Skills";
+import { DigitalMarketing } from "@/components/portfolio/DigitalMarketing";
+import { Services } from "@/components/portfolio/Services";
 import { Projects } from "@/components/portfolio/Projects";
 import { Experience } from "@/components/portfolio/Experience";
 import { Contact } from "@/components/portfolio/Contact";
@@ -12,17 +14,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Imtiaz Rafsan | Full Stack Web Developer" },
+      { title: "Imtiaz Rafsan | Web Development & Digital Marketing" },
       {
         name: "description",
         content:
-          "Explore the portfolio of Imtiaz Rafsan, a Computer Science graduate focused on web development, responsive design, website maintenance, and technical problem-solving.",
+          "Explore Imtiaz Rafsan’s portfolio for website design and development, SEO, social media marketing, Google Ads, and analytics, with verified work and clearly labeled demos.",
       },
-      { property: "og:title", content: "Imtiaz Rafsan | Full Stack Web Developer" },
+      { property: "og:title", content: "Imtiaz Rafsan | Web Development & Digital Marketing" },
       {
         property: "og:description",
         content:
-          "Explore the portfolio of Imtiaz Rafsan, a Computer Science graduate focused on web development, responsive design, website maintenance, and technical problem-solving.",
+          "Explore Imtiaz Rafsan’s portfolio for website design and development, SEO, social media marketing, Google Ads, and analytics, with verified work and clearly labeled demos.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -40,6 +42,8 @@ function Index() {
         <Hero />
         <About />
         <Skills />
+        <DigitalMarketing />
+        <Services />
         <Projects />
         <Experience />
         <Contact />

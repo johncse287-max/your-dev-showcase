@@ -4,8 +4,8 @@ const codeLines = [
   { text: "const developer = {", cls: "text-muted-foreground" },
   { text: '  name: "Imtiaz Rafsan",', cls: "text-foreground" },
   { text: '  role: "Full Stack Web Developer",', cls: "text-foreground" },
-  { text: '  focus: ["frontend", "design",', cls: "text-foreground" },
-  { text: '          "troubleshooting"],', cls: "text-foreground" },
+  { text: '  focus: ["web development",', cls: "text-foreground" },
+  { text: '          "digital marketing"],', cls: "text-foreground" },
   { text: '  location: "Bangladesh",', cls: "text-foreground" },
   { text: "  remote: true,", cls: "text-primary" },
   { text: "};", cls: "text-muted-foreground" },
@@ -35,13 +35,13 @@ export function Hero() {
             Imtiaz <span className="text-gradient">Rafsan</span>
           </h1>
           <p className="mt-4 text-lg font-medium text-muted-foreground sm:text-xl">
-            Full Stack Web Developer | Web Designer
+            Web Design &amp; Development | Digital Marketing
           </p>
           <p className="mt-6 max-w-xl leading-relaxed text-muted-foreground">
-            I build responsive, user-friendly web experiences and enjoy solving
-            technical problems. My interests include modern frontend
-            development, website maintenance, backend fundamentals, and
-            creating practical solutions for real-world needs.
+            I build responsive, user-friendly websites and bring a practical
+            digital marketing perspective to search visibility, social media,
+            paid campaigns, and analytics. My focus is on connecting thoughtful
+            design and development with a stronger online presence.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a

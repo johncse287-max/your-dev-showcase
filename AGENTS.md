@@ -10,6 +10,6 @@
 <!-- LOVABLE:END -->
 
 ## Architecture
-- Single-page portfolio at `src/routes/index.tsx` composed of section components in `src/components/portfolio/` (Nav, Hero, About, Skills, Projects, Experience, Contact, Footer); sections use anchor navigation, not separate routes.
+- Single-page portfolio at `src/routes/index.tsx` composed of section components in `src/components/portfolio/`, including dedicated DigitalMarketing and Services sections; sections use anchor navigation, not separate routes, to preserve the portfolio’s continuous browsing flow.
 - Demo projects live as standalone routes under `src/routes/demo.*.tsx` with `noindex`; they carry their own minimal chrome, not the portfolio Nav.
 - Design tokens (dark navy theme, fonts, utilities like `text-gradient`, `card-glass`) are defined in `src/styles.css` via Tailwind v4 `@theme inline` + `@utility`; components must use tokens, never hardcoded colors.
