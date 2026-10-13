@@ -5,6 +5,7 @@ const interests = [
   "Full stack web development",
   "Responsive web design",
   "Website maintenance",
+  "SEO-friendly development & digital marketing",
   "Debugging & technical troubleshooting",
   "Learning new technologies",
   "Remote collaboration with international teams",
@@ -23,7 +24,9 @@ export function About() {
               experiences. I completed my BSc in Computer Science &amp;
               Technology at Chongqing University of Science &amp; Technology in
               2022, and I've been developing my craft in web design, frontend
-              development, and technical problem-solving ever since.
+              development, and technical problem-solving ever since. My focus
+              also includes digital marketing — connecting website quality with
+              search visibility, content, and measurement.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               I enjoy the full lifecycle of a website — from designing
