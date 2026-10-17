@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiAskRouteImport } from './routes/api/ask'
 import { Route as DemoBusinessWebsiteRouteImport } from './routes/demo.business-website'
 import { Route as DemoDeveloperDashboardRouteImport } from './routes/demo.developer-dashboard'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiAskRoute = ApiAskRouteImport.update({
+  id: '/api/ask',
+  path: '/api/ask',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DemoBusinessWebsiteRoute = DemoBusinessWebsiteRouteImport.update({
@@ -31,30 +37,40 @@ const DemoDeveloperDashboardRoute = DemoDeveloperDashboardRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/api/ask': typeof ApiAskRoute
   '/demo/business-website': typeof DemoBusinessWebsiteRoute
   '/demo/developer-dashboard': typeof DemoDeveloperDashboardRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/api/ask': typeof ApiAskRoute
   '/demo/business-website': typeof DemoBusinessWebsiteRoute
   '/demo/developer-dashboard': typeof DemoDeveloperDashboardRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/api/ask': typeof ApiAskRoute
   '/demo/business-website': typeof DemoBusinessWebsiteRoute
   '/demo/developer-dashboard': typeof DemoDeveloperDashboardRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/demo/business-website' | '/demo/developer-dashboard'
+  fullPaths:
+    '/' | '/api/ask' | '/demo/business-website' | '/demo/developer-dashboard'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/demo/business-website' | '/demo/developer-dashboard'
-  id: '__root__' | '/' | '/demo/business-website' | '/demo/developer-dashboard'
+  to: '/' | '/api/ask' | '/demo/business-website' | '/demo/developer-dashboard'
+  id:
+    | '__root__'
+    | '/'
+    | '/api/ask'
+    | '/demo/business-website'
+    | '/demo/developer-dashboard'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ApiAskRoute: typeof ApiAskRoute
   DemoBusinessWebsiteRoute: typeof DemoBusinessWebsiteRoute
   DemoDeveloperDashboardRoute: typeof DemoDeveloperDashboardRoute
 }
@@ -66,6 +82,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/ask': {
+      id: '/api/ask'
+      path: '/api/ask'
+      fullPath: '/api/ask'
+      preLoaderRoute: typeof ApiAskRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/demo/business-website': {
@@ -87,6 +110,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ApiAskRoute: ApiAskRoute,
   DemoBusinessWebsiteRoute: DemoBusinessWebsiteRoute,
   DemoDeveloperDashboardRoute: DemoDeveloperDashboardRoute,
 }

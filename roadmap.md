@@ -11,3 +11,5 @@
 - [x] QA: build clean, no console errors, mobile menu + form validation verified in browser
 
 Awaiting from owner (not blockers): real CV file to enable Download CV, GitHub/LinkedIn URLs, optional CGPA, backend credentials for a server-side contact form.
+- [x] Share project build details with owner (requested)
+- [x] Recruiter AI Q&A assistant (#ask)
