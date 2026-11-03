@@ -11,6 +11,7 @@ const categories = [
       "JavaScript",
       "Bootstrap",
       "Responsive Web Design",
+      "WordPress (site building)",
       "Vue.js",
       "React (learning / project use)",
     ],

@@ -6,7 +6,7 @@ TITLE: Web Design & Development | Digital Marketing.
 EDUCATION: BSc in Computer Science & Technology, Chongqing University of Science & Technology, China, graduated 2022. (CGPA not published.)
 
 SKILLS
-- Frontend: HTML5, CSS3, JavaScript, Bootstrap, Responsive Web Design, Vue.js, React (learning / project use only).
+- Frontend & Site Building: HTML5, CSS3, JavaScript, Bootstrap, Responsive Web Design, WordPress website setup and site building, Vue.js, React (learning / project use only).
 - Backend: Python, C++, API integration and backend fundamentals.
 - Databases: MySQL, MongoDB.
 - Tools: Git, GitHub, Browser DevTools, debugging.
@@ -19,7 +19,7 @@ DIGITAL MARKETING CAPABILITIES
 - Analytics: Google Analytics 4, website traffic analysis, conversion measurement.
 - No campaign results, metrics, certifications or client case studies are published for marketing work.
 
-SERVICES OFFERED: Website Design & Development, SEO, Social Media Marketing, Google Ads Management.
+SERVICES OFFERED: Website Design & Development, WordPress Website Setup, SEO, Social Media Marketing, Google Ads Management. WordPress is offered as a service; no completed WordPress client project is published in the portfolio, so do not claim specific WordPress results or past WordPress clients.
 
 PROJECTS
 1. MONTECH Global Services (https://montechglobalservices.com) — real, live client website for a Bangladesh-based BPO and call center services business. Responsive layout, clear service presentation, consultation request workflow, deployed to production, ongoing maintenance.
