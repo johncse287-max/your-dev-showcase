@@ -1,4 +1,5 @@
-import { ArrowRight, Mail, Terminal } from "lucide-react";
+import { ArrowRight, Download, ExternalLink, Mail, Terminal } from "lucide-react";
+import cvAsset from "@/assets/imtiaz-rafsan-cv.pdf.asset.json";
 
 const codeLines = [
   { text: "const developer = {", cls: "text-muted-foreground" },
@@ -43,12 +44,19 @@ export function Hero() {
             paid campaigns, and analytics. My focus is on connecting thoughtful
             design and development with a stronger online presence.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
               href="#projects"
               className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 glow-ring"
             >
               View My Projects <ArrowRight size={16} />
+            </a>
+            <a
+              href={cvAsset.url}
+              download="Imtiaz_Rafsan_CV.pdf"
+              className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-primary/40 bg-secondary px-6 py-3 text-sm font-semibold text-secondary-foreground transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              <Download size={16} /> Download CV
             </a>
             <a
               href="#contact"
@@ -57,6 +65,14 @@ export function Hero() {
               <Mail size={16} /> Contact Me
             </a>
           </div>
+          <a
+            href={cvAsset.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            <ExternalLink size={12} /> View CV (opens in a new tab)
+          </a>
         </div>
 
         <div className="animate-float-slow hidden lg:block" aria-hidden="true">

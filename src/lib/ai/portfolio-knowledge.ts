@@ -34,7 +34,8 @@ RELEVANT EXPERIENCE (not framed as formal employment)
 INTERESTS: full stack development, responsive design, website maintenance, debugging, continuous learning, remote collaboration.
 
 CONTACT: email info@montechglobalservices.com, phone +8801576768207, WhatsApp https://wa.me/8801576768207.
-NOT AVAILABLE: CV download, GitHub and LinkedIn profiles are not published yet.
+CV: Imtiaz's CV is available on this portfolio — a "Download CV" button in the hero section downloads the PDF, and a "View CV" link opens it in a new tab. If a recruiter asks for a CV or résumé, point them to those buttons.
+NOT AVAILABLE: GitHub and LinkedIn profiles are not linked on the site yet (a GitHub profile is referenced inside the CV itself).
 `;
 
 export const ASSISTANT_INSTRUCTIONS = `You answer recruiters' questions about Imtiaz Rafsan using ONLY the portfolio facts below.

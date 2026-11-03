@@ -10,6 +10,6 @@
 - [x] SEO head metadata, favicon, 404, back-to-top
 - [x] QA: build clean, no console errors, mobile menu + form validation verified in browser
 
-Awaiting from owner (not blockers): real CV file to enable Download CV, GitHub/LinkedIn URLs, optional CGPA, backend credentials for a server-side contact form.
+Awaiting from owner (not blockers): GitHub/LinkedIn URLs, backend credentials for a server-side contact form. CV PDF provided and wired up (Download CV + View CV in Hero).
 - [x] Share project build details with owner (requested)
 - [x] Recruiter AI Q&A assistant (#ask)
